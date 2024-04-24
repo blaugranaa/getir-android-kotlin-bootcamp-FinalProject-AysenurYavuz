@@ -1,19 +1,14 @@
 package com.getir.patika.getir_android_kotlin_bootcamp_finalcase_aysenur_
 
 
-import CartItem
 import GlobalDataHolder
-import ShoppingCart
-import android.media.Image
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import org.checkerframework.checker.index.qual.GTENegativeOne
 
 class DataAdapter(
     private val onAddToCartClickListener: (position: Int) -> Unit,
@@ -24,7 +19,7 @@ class DataAdapter(
     private var products: MutableList<Product> = mutableListOf()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DataViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.card_view, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.cart_view, parent, false)
         return DataViewHolder(view)
     }
 
@@ -98,13 +93,13 @@ class DataAdapter(
         fun updateImage(text: Boolean) {
             if(text)
             {
-                removeButton.setImageResource(R.drawable.img_3)
+                removeButton.setImageResource(R.drawable.dcreaseicon)
 
 
             }
             else
             {
-                removeButton.setImageResource(R.drawable.img_1)
+                removeButton.setImageResource(R.drawable.trash_icon)
 
             }
         }

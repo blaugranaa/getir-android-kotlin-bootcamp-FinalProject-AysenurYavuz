@@ -9,8 +9,6 @@ data class CartItem(
     var quantity: Int
 )
 
-
-
 class ShoppingCart {
     private val cartItems = mutableListOf<CartItem>()
 

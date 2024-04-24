@@ -2,9 +2,7 @@ package com.getir.patika.getir_android_kotlin_bootcamp_finalcase_aysenur_
 
 
 
-import CartItem
 import GlobalDataHolder
-import ShoppingCart
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.provider.Settings.Global
@@ -42,7 +40,7 @@ class CardPage : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.card_page, container, false)
+        val view = inflater.inflate(R.layout.cart_page, container, false)
         orderSum = view.findViewById(R.id.orderSum)
         orderComplete   = view.findViewById(R.id.orderComplete)
         recy = view.findViewById(R.id.recy)
@@ -55,7 +53,7 @@ class CardPage : Fragment() {
         close.setOnClickListener {
             val transaction = requireActivity().supportFragmentManager.beginTransaction()
 
-            val fragment = home()
+            val fragment = HomeFragment()
             transaction.replace(R.id.frameLayout, fragment)
             transaction.commit()
         }
@@ -160,7 +158,7 @@ class CardPage : Fragment() {
             sum.text = "₺0.00"
             val transaction = requireActivity().supportFragmentManager.beginTransaction()
 
-            val fragment = home()
+            val fragment = HomeFragment()
             transaction.replace(R.id.frameLayout, fragment)
             transaction.commit()
         }

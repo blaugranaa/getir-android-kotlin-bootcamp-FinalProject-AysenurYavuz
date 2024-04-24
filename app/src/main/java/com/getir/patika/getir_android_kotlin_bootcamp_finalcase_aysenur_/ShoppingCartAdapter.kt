@@ -1,7 +1,6 @@
 package com.getir.patika.getir_android_kotlin_bootcamp_finalcase_aysenur_
 
 
-import CartItem
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup

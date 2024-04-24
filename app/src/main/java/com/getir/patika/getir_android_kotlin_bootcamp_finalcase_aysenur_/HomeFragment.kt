@@ -27,7 +27,7 @@ import java.text.NumberFormat
 import java.util.Locale
 
 
-class home : Fragment() {
+class HomeFragment : Fragment() {
     val shoppingCart = ShoppingCart()
 
 

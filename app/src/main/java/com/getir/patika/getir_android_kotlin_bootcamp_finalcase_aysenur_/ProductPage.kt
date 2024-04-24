@@ -10,7 +10,9 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import com.bumptech.glide.Glide
-
+import java.text.DecimalFormat
+import java.text.NumberFormat
+import java.util.Locale
 
 class ProductPage : Fragment() {
 
@@ -86,7 +88,43 @@ class ProductPage : Fragment() {
             Glide.with(requireContext()).load(productImageUrl).into(productImageView)
 
         }
+        val cartList = GlobalDataHolder.cartItemList.value ?: mutableListOf()
+        val productId = product.id
+        val cartItem = cartList.find { it.product.id == productId }
+        val quantity = cartItem?.quantity ?: 0
+        if(quantity==0)
+            butonsVisible(false)
+        else{
+            butonsVisible(true)
+            productQuantity.text= quantity.toString()
+        }
 
+
+        adToCard.setOnClickListener {
+
+            GlobalDataHolder.addToCart(product)
+            var x = GlobalDataHolder.getQuantityOfProduct(productId)
+            productQuantity.text = x.toString()
+
+            update()
+
+        }
+
+        removeCard.setOnClickListener {
+            //shoppingCart.removeItem(product)
+            GlobalDataHolder.removeFromCart(productId)
+            var x = GlobalDataHolder.getQuantityOfProduct(productId)
+            productQuantity.text = x.toString()
+            update()
+        }
+
+
+        addButton.setOnClickListener {
+            butonsVisible(true)
+        }
+
+        return view
+    }
 
     fun butonsVisible(visible:Boolean)
     {
@@ -108,5 +146,21 @@ class ProductPage : Fragment() {
 
     }
 
+    fun update()
+    {
+        lateinit var totalPrice: TextView
+        //GlobalDataHolder.cartItemList.value = shoppingCart.getCartItems()
 
+        totalPrice = requireActivity().findViewById(R.id.cardSum)
+        val total = GlobalDataHolder.getTotalPrice()
+
+        val currencyFormat = NumberFormat.getCurrencyInstance(Locale("tr", "TR"))
+        val decimalFormatSymbols = (currencyFormat as DecimalFormat).decimalFormatSymbols
+        decimalFormatSymbols.currencySymbol = "₺"
+        (currencyFormat as DecimalFormat).decimalFormatSymbols = decimalFormatSymbols
+
+        val formattedTotalPrice = currencyFormat.format(total)
+
+        totalPrice.text = formattedTotalPrice
+    }
 }
