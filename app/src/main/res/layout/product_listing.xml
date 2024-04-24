@@ -30,7 +30,7 @@
     <View
         android:id="@+id/view8"
         android:layout_width="130dp"
-        android:background="@drawable/card_button"
+        android:background="@drawable/cart_button"
         android:layout_height="60dp"
         app:layout_constraintBottom_toBottomOf="@+id/view7"
         app:layout_constraintEnd_toEndOf="@+id/view7"
