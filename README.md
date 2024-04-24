@@ -8,17 +8,7 @@ https://github.com/blaugranaa/getir-android-kotlin-bootcamp-FinalProject-Aysenur
 
 This is an e-commerce mobile application developed for Android. Users can browse products, view details, add items to the cart, and place orders.
 
-## Technologies Used
-
-- MVVM Architecture
-- Android Jetpack Components (ViewModel, LiveData)
-- Glide Library
-
 ## Project Structure
-
-- **Model**: Data classes and data management logic.
-- **View**: User interface components (XML files and Fragments).
-- **ViewModel**: Acts as a mediator between View and Model layers.
 
 The main components of the application are as follows:
 
@@ -30,6 +20,12 @@ The main components of the application are as follows:
 - **DataRepository**: Class used for fetching data from the server. Retrofit is used to send requests to the server, and the received data is processed and passed to the ViewModel.
 - **ShoppingCartAdapter**: Adapter used to list the cart in a RecyclerView. It enables the listing of products in the cart.
 
+## Technologies Used
+
+- MVVM Architecture
+- Android Jetpack Components (ViewModel, LiveData)
+- Glide Library
+- Coroutines
 
 ## Installation
 
