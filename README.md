@@ -1,5 +1,9 @@
 # Getir Android Kotlin Bootcamp Final Project
 
+
+https://github.com/blaugranaa/getir-android-kotlin-bootcamp-FinalProject-AysenurYavuz/assets/24704582/d0f5c1f8-4d4c-434f-ab61-6c7a9d137a1f
+
+
 ## Description
 
 This is an e-commerce mobile application developed for Android. Users can browse products, view details, add items to the cart, and place orders.
