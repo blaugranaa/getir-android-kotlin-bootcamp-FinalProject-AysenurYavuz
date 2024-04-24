@@ -11,7 +11,7 @@ This is an e-commerce mobile application developed for Android. Users can browse
 ## Technologies Used
 
 - MVVM Architecture
-- Android Jetpack Components (ViewModel, LiveData, Navigation Component)
+- Android Jetpack Components (ViewModel, LiveData)
 - Glide Library
 
 ## Project Structure
