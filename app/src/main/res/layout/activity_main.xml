@@ -64,7 +64,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/view2"
         app:layout_constraintStart_toStartOf="@+id/view2"
         app:layout_constraintTop_toTopOf="@+id/view2"
-        app:srcCompat="@drawable/trash_icon" />
+        app:srcCompat="@drawable/carticon" />
 
     <TextView
         android:id="@+id/cardSum"

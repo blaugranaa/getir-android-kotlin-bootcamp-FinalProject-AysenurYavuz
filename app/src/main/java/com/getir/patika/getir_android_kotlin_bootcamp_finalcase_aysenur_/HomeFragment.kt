@@ -2,9 +2,7 @@ package com.getir.patika.getir_android_kotlin_bootcamp_finalcase_aysenur_
 
 
 import GlobalDataHolder
-import ProductPage
 
-import ShoppingCart
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.provider.Settings.Global

@@ -17,7 +17,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/img" />
+        app:srcCompat="@drawable/product" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -29,19 +29,21 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/img_1" />
+        app:srcCompat="@drawable/trash_icon" />
 
     <ImageView
         android:id="@+id/addToCartButton"
         android:layout_width="25dp"
         android:layout_height="25dp"
+        android:scaleType="centerInside"
+
         android:background="#FFF"
         android:backgroundTint="#fff"
         android:foreground="@drawable/top_radius"
         app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toStartOf="@+id/view"
         app:layout_constraintTop_toTopOf="@+id/view"
-        app:srcCompat="@drawable/img_2" />
+        app:srcCompat="@drawable/plus" />
 
 
     <View
