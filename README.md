@@ -25,7 +25,7 @@ The main components of the application are as follows:
 - MVVM Architecture
 - Android Jetpack Components (ViewModel, LiveData)
 - Glide Library
-- Coroutines
+- Flow & Coroutines
 
 ## Installation
 
